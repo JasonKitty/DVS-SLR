@@ -1,7 +1,8 @@
 # DVS-SLR Benchmark Dataset
-![Sample GIF](sample.gif)
+
 ## Introduction
 The DVS-SLR dataset is a dual-modal neuromorphic dataset designed to address the limitations of existing neuromorphic datasets and to promote the development of Spiking Neural Network (SNN) oriented technologies. With a focus on action recognition, this dataset is crafted to fully exploit the spatio-temporal capabilities of SNNs and to facilitate research into SNN-based fusion methods.
+![Sample GIF](sample.gif)
 
 ## Dataset Features
 - **Large-Scale**: Comprising 5,418 samples recorded by 43 subjects, each lasting about 6 seconds, the dataset provides over 9 hours of recording.
