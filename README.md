@@ -14,19 +14,6 @@ The DVS-SLR dataset is a dual-modal neuromorphic dataset designed to address the
 
 Here's how to use The `DVS346Sign` class:
 
-### Importing the Dataset Class
-
-### Importing the Dataset Class
-Ensure you have the necessary libraries and the `DVS346Sign` class file in your working directory. Import the class using:
-```python
-from dataset import DVS346Sign
-
-Here's a detailed Markdown section that describes the usage of the `DVS346Sign` class from your `dataset.py` script. You can add this section to your GitHub README file to guide users on how to interact with the dataset using your provided Python class.
-
-```markdown
-## Dataset Usage Guide
-
-The `DVS346Sign` class is designed to facilitate easy loading and processing of the DVS-SLR dataset for training and testing in PyTorch environments. Here's how to use this class:
 
 ### Importing the Dataset Class
 Ensure you have the necessary libraries and the `DVS346Sign` class file in your working directory. Import the class using:
