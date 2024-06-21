@@ -10,6 +10,73 @@ The DVS-SLR dataset is a dual-modal neuromorphic dataset designed to address the
 - **Multiple Positions**: Data recorded from different distances (front and back positions) provide varied event rates and spatial distributions.
 - **Dual-Modality**: Utilizing the DAVIS346 camera, the dataset includes both event streams and frame streams.
 
+## Dataset Usage Guide
+
+Here's how to use The `DVS346Sign` class:
+
+### Importing the Dataset Class
+
+### Importing the Dataset Class
+Ensure you have the necessary libraries and the `DVS346Sign` class file in your working directory. Import the class using:
+```python
+from dataset import DVS346Sign
+
+Here's a detailed Markdown section that describes the usage of the `DVS346Sign` class from your `dataset.py` script. You can add this section to your GitHub README file to guide users on how to interact with the dataset using your provided Python class.
+
+```markdown
+## Dataset Usage Guide
+
+The `DVS346Sign` class is designed to facilitate easy loading and processing of the DVS-SLR dataset for training and testing in PyTorch environments. Here's how to use this class:
+
+### Importing the Dataset Class
+Ensure you have the necessary libraries and the `DVS346Sign` class file in your working directory. Import the class using:
+```python
+from dataset import DVS346Sign
+```
+
+### Initializing the Dataset
+Create an instance of the `DVS346Sign` class by specifying the path to your dataset, the subsets of users, labels, lighting conditions, and positions you want to include:
+```python
+root_dir = 'path_to_your_dataset'
+users = ['user'+str(i) for i in range(43)]
+labels = ['at','drink','eat','everybody','go','home','i','jump','listen','rest','run','school','see','shower','sleep','study','talk','want','washhands','you','other']
+lights = ['brightLED', 'dimLED', 'naturalLight']
+positions = ['front', 'back']
+dataset = DVS346Sign(root_dir, users, labels, lights, positions)
+```
+
+### Accessing Data
+The dataset can be accessed like any standard PyTorch dataset:
+```python
+from torch.utils.data.dataloader import DataLoader
+
+# Initialize DataLoader
+data_loader = DataLoader(dataset, batch_size=2, shuffle=True)
+
+# Iterate through the data
+for data, label in data_loader:
+    (spike_frames, rgb_frames) = data
+    # Add your Processing code here
+    # torch.Size([2, 120, 2, 260, 346]) torch.Size([2, 120, 3, 260, 346]) tensor([6, 3])
+    print(spike_frames.shape, rgb_frames.shape, label)
+```
+
+### Detailed Description of Methods
+- **`temporal_sample(frames)`**: Samples frames based on a defined temporal interval `dt` to align with the temporal resolution of event data.
+- **`pad_frames(spike_frames, rgb_frames, length)`**: Ensures all data samples are of uniform length by padding shorter sequences with the last frame.
+- **`generate_bimodal_synchronous_frame_stream(frames, events)`**: Generates synchronized spike and RGB frame streams from the raw event and frame data.
+- **`align_frame(t_frame, imgs, t_event)`**: Aligns the frame timestamps with the events to ensure temporal synchronization.
+
+### Requirements
+- Python 3.x
+- PyTorch
+- NumPy
+- `spikingjelly` library for event-based neural network implementations.
+
+```
+
+
+
 ## Access and Additional Resources
 The dataset is available on Google Drive [Add a hyperlink here]. We also provide the data loading code and the source code of the CMA module.
 
