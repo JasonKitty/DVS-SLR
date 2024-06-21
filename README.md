@@ -73,9 +73,6 @@ for data, label in data_loader:
 - NumPy
 - `spikingjelly` library for event-based neural network implementations.
 
-```
-
-
 
 ## Access and Additional Resources
 The dataset is available on Google Drive [Add a hyperlink here]. We also provide the data loading code and the source code of the CMA module.
