@@ -65,3 +65,16 @@ The dataset, along with the data loading code and the source code of the CMA mod
 
 - **GitHub Repository:** [https://github.com/JasonKitty/DVS-SLR](https://github.com/JasonKitty/DVS-SLR)
 - **Data Access:** [[Google Drive](https://drive.google.com/file/d/1xcIIUmvdkZ2a1c0AMdtXpfafBIpuhiYO/view?usp=drive_link)]
+
+## Citation
+If you find our dataset or algorithms useful, please cite our paper:
+```bibtex
+@article{zhou2024enhancing,
+  title={Enhancing SNN-based spatio-temporal learning: A benchmark dataset and Cross-Modality Attention model},
+  author={Zhou, Shibo and Yang, Bo and Yuan, Mengwen and Jiang, Runhao and Yan, Rui and Pan, Gang and Tang, Huajin},
+  journal={Neural Networks},
+  pages={106677},
+  year={2024},
+  publisher={Elsevier}
+}
+```
